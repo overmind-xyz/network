@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: 'development'
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    expose:
+      - '3306'
+volumes:
+  db_data:

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #0f1116;
+  color: #ffffff;
+}
+
+/* Spinner */
+
+#items {
+  background-image: url('/spinner.png');
+  background-size: cover;
+  height: 90px;
+  width: 100%;
+  position: relative;
+}
+
+.spin {
+  -webkit-transition: all 6000ms cubic-bezier(0.34, 0.87, 0.52, 1);
+  -moz-transition: all 6000ms cubic-bezier(0.34, 0.87, 0.52, 1);
+  -o-transition: all 6000ms cubic-bezier(0.34, 0.87, 0.52, 1);
+  transition: all 6000ms cubic-bezier(0.34, 0.87, 0.52, 1); /* custom */
+
+  -webkit-transition-timing-function: cubic-bezier(0.34, 0.87, 0.52, 1);
+  -moz-transition-timing-function: cubic-bezier(0.34, 0.87, 0.52, 1);
+  -o-transition-timing-function: cubic-bezier(0.34, 0.87, 0.52, 1);
+  transition-timing-function: cubic-bezier(0.34, 0.87, 0.52, 1); /* custom */
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
